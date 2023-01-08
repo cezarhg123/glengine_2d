@@ -6,7 +6,6 @@ pub mod vao;
 pub mod buffer;
 pub mod uniform;
 pub mod texture;
-mod tests;
 
 
 pub use gl::load_with;
