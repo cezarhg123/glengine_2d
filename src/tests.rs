@@ -1,12 +1,12 @@
-use std::mem::size_of;
-use glfw::Context;
-use crate::{gl, Shader, VAO, buffer::Buffer, draw_arrays, draw_element, texture::Texture, uniform::{Uniform, uniform, UniformType}};
-
 struct Vertex(f32, f32);
 struct VertexUV(f32, f32, f32, f32);
 
 #[test]
 fn color_no_ebo() {
+    use std::mem::size_of;
+    use glfw::Context;
+    use crate::{gl, Shader, VAO, buffer::Buffer, draw_arrays, draw_element, texture::Texture, uniform::{Uniform, uniform, UniformType}};
+
     let mut glfw = glfw::init(glfw::FAIL_ON_ERRORS).unwrap();
 
     let (mut window, events) = glfw.create_window(800, 800, "Color Test", glfw::WindowMode::Windowed).unwrap();
@@ -53,6 +53,10 @@ fn color_no_ebo() {
 
 #[test]
 fn color_ebo() {
+    use std::mem::size_of;
+    use glfw::Context;
+    use crate::{gl, Shader, VAO, buffer::Buffer, draw_arrays, draw_element, texture::Texture, uniform::{Uniform, uniform, UniformType}};
+
     let mut glfw = glfw::init(glfw::FAIL_ON_ERRORS).unwrap();
 
     let (mut window, events) = glfw.create_window(800, 800, "Color With EBO Test", glfw::WindowMode::Windowed).unwrap();
@@ -108,6 +112,10 @@ fn color_ebo() {
 
 #[test]
 fn image() {
+    use std::mem::size_of;
+    use glfw::Context;
+    use crate::{gl, Shader, VAO, buffer::Buffer, draw_arrays, draw_element, texture::Texture, uniform::{Uniform, uniform, UniformType}};
+
     let mut glfw = glfw::init(glfw::FAIL_ON_ERRORS).unwrap();
 
     let (mut window, events) = glfw.create_window(800, 800, "Color With EBO Test", glfw::WindowMode::Windowed).unwrap();
