@@ -57,37 +57,13 @@ impl Shader {
                     );
                 }
                 Vec2(f1, f2) => {
-                    let v = [
-                        f1, f2
-                    ]; // put values in array for use with OpenGL
-                    
-                    gl::Uniform2fv(
-                        gl::GetUniformLocation(self.id, uniform.name.as_ptr().cast()),
-                        1,
-                        v.as_ptr()
-                    );
+                    gl::Uniform2f(gl::GetUniformLocation(self.id, uniform.name.as_ptr().cast()), f1, f2);
                 }
                 Vec3(f1, f2, f3) => {
-                    let v = [
-                        f1, f2, f3
-                    ]; // put values in array for use with OpenGL
-
-                    gl::Uniform3fv(
-                        gl::GetUniformLocation(self.id, uniform.name.as_ptr().cast()),
-                        1,
-                        v.as_ptr()
-                    );
+                    gl::Uniform3f(gl::GetUniformLocation(self.id, uniform.name.as_ptr().cast()), f1, f2, f3);
                 }
                 Vec4(f1, f2, f3, f4) => {
-                    let v = [
-                        f1, f2, f3, f4
-                    ]; // put values in array for use with OpenGL
-
-                    gl::Uniform4fv(
-                        gl::GetUniformLocation(self.id, uniform.name.as_ptr().cast()),
-                        1,
-                        v.as_ptr()
-                    );
+                    gl::Uniform4f(gl::GetUniformLocation(self.id, uniform.name.as_ptr().cast()), f1, f2, f3, f4);
                 }
             }
         }
